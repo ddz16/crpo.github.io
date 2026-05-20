@@ -338,6 +338,10 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Motivation</h2>
     <div class="content">
+      <div style="text-align:center; margin-bottom: 1.5rem;">
+<img src="static/images/motivation.png?v=2" alt="Motivation: Video LLMs exploit static shortcuts" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+        <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: (a) A static-shortcut model answers correctly without tracking motion. (b) Accuracy on dynamic tasks strongly correlates with spatiotemporal sensitivity (Pearson r = −0.87).</p>
+      </div>
       <p>
         Current Video LLMs often answer correctly by exploiting <strong>static shortcuts</strong>—single-frame cues and language priors—rather than tracking how events unfold over time. This problem becomes especially consequential in RL post-training: GRPO-style RL typically relies on correctness-only rewards, so if a single frame or a language-based guess is enough to answer a training question, the policy can receive high reward without tracking video dynamics.
       </p>
@@ -347,10 +351,6 @@
       <p>
         We call this property <em>spatiotemporal sensitivity</em>: <strong>equivariance</strong> for dynamic questions and <strong>invariance</strong> for static questions. Such a behavioral signature is difficult for static shortcut policies to satisfy consistently.
       </p>
-      <div style="text-align:center; margin-top: 1.5rem;">
-<img src="static/images/motivation.png?v=2" alt="Motivation: Video LLMs exploit static shortcuts" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
-        <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: (a) A static-shortcut model answers correctly without tracking motion. (b) Accuracy on dynamic tasks strongly correlates with spatiotemporal sensitivity (Pearson r = −0.87).</p>
-      </div>
     </div>
   </div>
 </section>
@@ -411,6 +411,10 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">DyBench: A Paired Counterfactual Benchmark</h2>
     <div class="content">
+      <div style="text-align:center; margin-bottom: 1.5rem;">
+<img src="static/images/dataset.png?v=2" alt="DyBench dataset examples and statistics" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+        <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: DyBench examples for each task category (left) and dataset statistics including video duration distribution and source breakdown (right).</p>
+      </div>
       <p>
         We introduce <strong>DyBench</strong>, a paired counterfactual benchmark of <strong>1,507 video pairs (3,014 videos)</strong> targeting motion direction, event order, and the arrow of time — the three aspects of a video most readily masked by static shortcuts.
       </p>
@@ -443,10 +447,7 @@
         <strong>Pair Accuracy (P-Acc):</strong> A pair is counted as correct only when the model answers <em>both</em> videos correctly. By construction, P-Acc cannot be inflated by static-shortcut policies that always return the same answer — such policies score zero on every pair.
       </div>
 
-      <div style="text-align:center; margin-top: 1.5rem;">
-<img src="static/images/dataset.png?v=2" alt="DyBench dataset examples and statistics" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
-        <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: DyBench examples for each task category (left) and dataset statistics including video duration distribution and source breakdown (right).</p>
-      </div>
+
       <p style="margin-top: 1rem;">
         DyBench draws videos from diverse sources including Something-Something-v2, GOT-10k, Breakfast, 50Salads, and more, covering humans, objects, animals, and plants. All pairs undergo manual verification for static-content consistency and temporal minimality.
       </p>
@@ -621,11 +622,11 @@
         <span class="copy-text">Copy</span>
       </button>
     </div>
-    <pre id="bibtex-code"><code>@article{du2025crpo,
+    <pre id="bibtex-code"><code>@article{du2026crpo,
   title={Learning Spatiotemporal Sensitivity in Video LLMs via Counterfactual Reinforcement Learning},
   author={Du, Dazhao and Liu, Jian and Qin, Jialong and Han, Tao and Gu, Bohai and Zhu, Fangqi and Zhang, Yujia and Liu, Eric and Chen, Xi and Guo, Song},
-  year={2025},
-  url={https://crpo.github.io}
+  year={2026},
+  url={https://ddz16.github.io/crpo.github.io/}
 }</code></pre>
   </div>
 </section>
