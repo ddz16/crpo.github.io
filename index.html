@@ -348,7 +348,7 @@
         We call this property <em>spatiotemporal sensitivity</em>: <strong>equivariance</strong> for dynamic questions and <strong>invariance</strong> for static questions. Such a behavioral signature is difficult for static shortcut policies to satisfy consistently.
       </p>
       <div style="text-align:center; margin-top: 1.5rem;">
-        <img src="static/images/motivation.png" alt="Motivation: Video LLMs exploit static shortcuts" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+<img src="static/images/motivation.png?v=2" alt="Motivation: Video LLMs exploit static shortcuts" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
         <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: (a) A static-shortcut model answers correctly without tracking motion. (b) Accuracy on dynamic tasks strongly correlates with spatiotemporal sensitivity (Pearson r = −0.87).</p>
       </div>
     </div>
@@ -366,7 +366,7 @@
       </p>
 
       <div style="text-align:center; margin-bottom: 2rem;">
-        <img src="static/images/CRPO.png" alt="CRPO Framework Overview" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+<img src="static/images/CRPO.png?v=2" alt="CRPO Framework Overview" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
         <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: Overview of the CRPO framework. Left: dual-branch training with original and counterfactual videos. Right: Task Router using a text-only reasoning model to classify question type and select the appropriate counterfactual transformation.</p>
       </div>
 
@@ -444,7 +444,7 @@
       </div>
 
       <div style="text-align:center; margin-top: 1.5rem;">
-        <img src="static/images/dataset.png" alt="DyBench dataset examples and statistics" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+<img src="static/images/dataset.png?v=2" alt="DyBench dataset examples and statistics" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
         <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: DyBench examples for each task category (left) and dataset statistics including video duration distribution and source breakdown (right).</p>
       </div>
       <p style="margin-top: 1rem;">
@@ -519,11 +519,11 @@
     <div class="content">
       <p class="has-text-centered">Comparison of Qwen3-VL (base) and CRPO on counterfactual video pairs. CRPO correctly changes its answer when the video is transformed, while the base model often gives the same answer regardless of the transformation.</p>
       <div style="text-align:center; margin-top: 1.5rem;">
-        <img src="static/images/example.png" alt="Qualitative example 1: Moving direction task" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+<img src="static/images/example.png?v=2" alt="Qualitative example 1: Moving direction task" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
         <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: Moving direction example. Left pair: original video. Right pair: horizontally flipped video. The base model (red) gives the same wrong answer on both; CRPO (green) correctly changes its answer.</p>
       </div>
       <div style="text-align:center; margin-top: 2rem;">
-        <img src="static/images/example2.png" alt="Qualitative example 2: Moving direction task" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+<img src="static/images/example2.png?v=2" alt="Qualitative example 2: Moving direction task" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
         <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: Another moving direction example. CRPO correctly tracks the object's motion direction in both the original and counterfactual video, while the base model fails to distinguish the two.</p>
       </div>
     </div>
@@ -538,7 +538,7 @@
     <div class="content">
       <p class="has-text-centered">Training curves show that all CRPO reward components grow steadily throughout training, indicating the policy actively learns spatiotemporal sensitivity rather than converging to shortcuts.</p>
       <div style="text-align:center; margin-top: 1.5rem;">
-        <img src="static/images/reward_comparison.png" alt="Reward comparison across RL methods" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+<img src="static/images/reward_comparison.png?v=2" alt="Reward comparison across RL methods" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
         <p style="font-size:0.85rem; color:#666; margin-top:0.6rem;">Figure: Comparison of training curves across RL methods. CRPO achieves a significantly higher auxiliary (CRR) reward while maintaining competitive correctness reward.</p>
       </div>
     </div>
