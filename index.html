@@ -8,7 +8,7 @@
   <meta name="title" content="CRPO: Learning Spatiotemporal Sensitivity in Video LLMs via Counterfactual Reinforcement Learning">
   <meta name="description" content="CRPO is a dual-branch RL framework that improves spatiotemporal sensitivity in Video LLMs via Counterfactual Relation Reward, along with DyBench, a paired counterfactual video benchmark.">
   <meta name="keywords" content="Video LLM, Reinforcement Learning, Spatiotemporal, Counterfactual, GRPO, Video Understanding, DyBench, CRPO">
-  <meta name="author" content="Zhaodu Du">
+  <meta name="author" content="Dazhao Du">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
@@ -20,7 +20,7 @@
   <meta property="og:url" content="https://crpo.github.io">
   <meta property="og:image" content="https://crpo.github.io/static/images/favicon.ico">
   <meta property="article:published_time" content="2025-01-01T00:00:00.000Z">
-  <meta property="article:author" content="Zhaodu Du">
+  <meta property="article:author" content="Dazhao Du">
   <meta property="article:section" content="Research">
   <meta property="article:tag" content="Video LLM">
   <meta property="article:tag" content="Reinforcement Learning">
@@ -32,7 +32,7 @@
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="Learning Spatiotemporal Sensitivity in Video LLMs via Counterfactual Reinforcement Learning">
-  <meta name="citation_author" content="Du, Zhaodu">
+  <meta name="citation_author" content="Du, Dazhao">
   <meta name="citation_publication_date" content="2025">
   <meta name="citation_conference_title" content="NeurIPS 2026">
   
@@ -51,8 +51,8 @@
   <title>CRPO: Learning Spatiotemporal Sensitivity in Video LLMs via Counterfactual Reinforcement Learning</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/icon.ico">
+  <link rel="apple-touch-icon" href="static/images/icon.ico">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -204,13 +204,23 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Learning Spatiotemporal Sensitivity in Video LLMs<br>via Counterfactual Reinforcement Learning</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://github.com/ddz16" target="_blank">Zhaodu Du</a>
-              </span>
+            <div class="is-size-5 publication-authors" style="margin-top: 0.8rem;">
+              <span class="author-block">Dazhao Du<sup>1,2</sup>,&nbsp;</span>
+              <span class="author-block">Jian Liu<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Jialong Qin<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Tao Han<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Bohai Gu<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Fangqi Zhu<sup>1</sup>,&nbsp;</span>
+              <span class="author-block">Yujia Zhang<sup>2</sup>,&nbsp;</span>
+              <span class="author-block">Eric Liu<sup>2</sup>,&nbsp;</span>
+              <span class="author-block">Xi Chen<sup>2</sup>,&nbsp;</span>
+              <span class="author-block">Song Guo<sup>1</sup></span>
+            </div>
+            <div class="is-size-6 publication-authors" style="margin-top: 0.4rem; color: #555;">
+              <span class="author-block"><sup>1</sup>HKUST&nbsp;&nbsp;&nbsp;<sup>2</sup>Tencent</span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors" style="margin-top: 0.6rem;">
               <span class="author-block">NeurIPS 2026 Submission</span>
             </div>
 
@@ -287,13 +297,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video large language models (Video LLMs) achieve strong benchmark accuracy, yet often answer video questions through <strong>shortcuts</strong> such as single-frame cues and language priors rather than by tracking spatiotemporal dynamics. This issue is exacerbated in RL post-training, where correctness-only rewards can further reinforce shortcut policies that obtain high reward without tracking video dynamics.
-          </p>
-          <p>
-            We address this by asking a controlled counterfactual question: <em>if the visual world changed while the question remained fixed, should the answer change or stay the same?</em> Based on this view, we propose <strong>Counterfactual Relational Policy Optimization (CRPO)</strong>, a dual-branch RL framework for improving <em>spatiotemporal sensitivity</em>. CRPO constructs counterfactual videos through horizontal flips and temporal reversals, trains on both original and counterfactual branches, and introduces a <strong>Counterfactual Relation Reward (CRR)</strong> between their answers. CRR encourages answers to change for dynamic questions and remain unchanged for static questions.
-          </p>
-          <p>
-            To evaluate this property, we introduce <strong>DyBench</strong>, a paired counterfactual video benchmark with 3,014 videos covering reversible dynamics, moving direction, and event sequence, together with a strict pair-accuracy metric that prevents fixed-answer shortcuts from inflating scores. Experiments show that CRPO outperforms prior RL methods on spatiotemporal-sensitive evaluations while maintaining competitive general video performance. On Qwen3-VL-8B, CRPO improves DyBench P-Acc by <strong>+7.7</strong> and TimeBlind I-Acc by <strong>+8.2</strong> over the base model.
+            Video large language models (Video LLMs) achieve strong benchmark accuracy, yet often answer video questions through <strong>shortcuts</strong> such as single-frame cues and language priors rather than by tracking spatiotemporal dynamics. This issue is exacerbated in RL post-training, where correctness-only rewards can further reinforce shortcut policies that obtain high reward without tracking video dynamics. We address this by asking a controlled counterfactual question: <em>if the visual world changed while the question remained fixed, should the answer change or stay the same?</em> Based on this view, we propose <strong>Counterfactual Relational Policy Optimization (CRPO)</strong>, a dual-branch RL framework for improving <em>spatiotemporal sensitivity</em>. CRPO constructs counterfactual videos through horizontal flips and temporal reversals, trains on both original and counterfactual branches, and introduces a <strong>Counterfactual Relation Reward (CRR)</strong> between their answers. CRR encourages answers to change for dynamic questions and remain unchanged for static questions. To evaluate this property, we introduce <strong>DyBench</strong>, a paired counterfactual video benchmark with 3,014 videos covering reversible dynamics, moving direction, and event sequence, together with a strict pair-accuracy metric that prevents fixed-answer shortcuts from inflating scores. Experiments show that CRPO outperforms prior RL methods on spatiotemporal-sensitive evaluations while maintaining competitive general video performance. On Qwen3-VL-8B, CRPO improves DyBench P-Acc by <strong>+7.7</strong> and TimeBlind I-Acc by <strong>+8.2</strong> over the base model.
           </p>
         </div>
       </div>
